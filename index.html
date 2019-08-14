@@ -1,0 +1,55 @@
+<html>
+<head>
+  <title>Base HTML</title>
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" integrity="sha256-PF6MatZtiJ8/c9O9HQ8uSUXr++R9KBYu4gbNG5511WE=" crossorigin="anonymous" />
+</head>
+
+<body>
+
+  <div class="main">
+    <h2>Audio Player Test</h2>
+    <div class="align-center">
+      <button class="new-player secondary-btn" data-audiofile="assets/audio/sample-mp3-file.mp3">MP3</button>
+      <button class="new-player secondary-btn" data-audiofile="assets/audio/sample-mp4-file.mp4">MP4</button>
+      <button class="new-player secondary-btn" data-audiofile="assets/audio/sample-wav-file.wav">WAV</button>
+      <button class="new-player secondary-btn" data-audiofile="assets/audio/sample-webm-file.webm">WEBM</button>
+    </div>
+    <p id="title" class="align-center"></p>
+<div class="player-container" id="player" data-audiofile="assets/sample-audio.mp3">
+  <div class="controls-container">
+    <div class="btn" id="playBtn" style="color:lightgray"><i class="fas fa-play"></i></div>
+    <div class="btn hidden" id="pauseBtn"><i class="fas fa-pause"></i></div>
+  </div>
+
+  <div class="timing-container">
+    <span class="time" id="timer">0:00</span>
+    <span>/</span>
+    <span class="time" id="duration"></span>
+  </div>
+
+  <div class="progress-bar-container">
+    <div id="progress"></div>
+    <div id="bar"></div>
+  </div>
+
+  <div class="speed-control-container" id="speedControls">
+    <span class="speed" id="speedControl" data-speed="1">1x</span>
+  </div>
+</div>
+
+<div class="btn-container">
+  <button class="primary-btn" id="annotate">Annotate</button>
+</div>
+
+<div id="annotations-container"></div>
+
+</div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.2/howler.min.js" integrity="sha256-El7dyxdVp1e1v0xgjrrpzr5+BO29pwP0Qfl40VDffiI=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/js/main.js" async></script>
+</body>
+
+</html>

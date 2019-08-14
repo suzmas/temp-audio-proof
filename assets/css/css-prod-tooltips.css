@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600");
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #d3dee3;
+  color: #4c4c4c; }
+
+body * {
+  box-sizing: border-box; }
+
+h1 {
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase; }
+
+p {
+  line-height: 1.3; }
+
+img {
+  max-width: 100%; }
+
+.main {
+  max-width: 700px;
+  padding: 30px 25px;
+  margin: 30px auto;
+  background: #fff; }
+  @media (min-width: 768px) {
+    .main {
+      padding: 30px 50px; } }
+
+.prod-ctr .tip-header a {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #0058a3;
+  margin-bottom: 5px;
+  text-transform: uppercase; }
+
+.prod-ctr .tip-body {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px; }
+
+.prod-ctr .tip-price {
+  font-size: 16px;
+  font-weight: bold; }
+
+/* Hover Tooltips */
+.prod-ctr {
+  display: inline-block;
+  position: relative;
+  margin: 0 auto; }
+
+.prod-ctr img {
+  border: 8px solid #fff; }
+
+.prod-ctr .tip-btn {
+  height: 25px;
+  width: 25px;
+  background: transparent;
+  border: none;
+  border-radius: 100px;
+  z-index: 2;
+  cursor: pointer; }
+  .prod-ctr .tip-btn:hover, .prod-ctr .tip-btn:active, .prod-ctr .tip-btn:focus {
+    z-index: 3; }
+
+.prod-ctr .tip-btn::before {
+  content: '+';
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #fff;
+  border: 1px solid #0058a3;
+  border-radius: 100px;
+  font-size: 18px;
+  line-height: 18px;
+  color: #0058a3;
+  transform: translate(-50%, -50%);
+  transition: all .1s ease-in;
+  z-index: 1; }
+  @media (min-width: 600px) {
+    .prod-ctr .tip-btn::before {
+      height: 25px;
+      width: 25px;
+      font-size: 25px;
+      line-height: 25px; } }
+
+.prod-ctr .tip-btn:hover::before,
+.prod-ctr .tip-btn:active::before,
+.prod-ctr .tip-btn:focus::before {
+  background-color: #0058a3;
+  color: #fff; }
+
+.prod-ctr .tip-btn .tip {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  margin: 0;
+  width: 180px;
+  background-color: white;
+  border: 2px solid #0058a3;
+  padding: 20px;
+  text-align: left;
+  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.29);
+  transition: opacity .2s ease-in; }
+
+@media (min-width: 600px) {
+  .prod-ctr .tip-btn:hover .tip,
+  .prod-ctr .tip-btn:active .tip,
+  .prod-ctr .tip-btn:focus .tip {
+    visibility: visible;
+    opacity: 1; } }
+
+.prod-ctr .tip-btn .tip.tip--left {
+  left: unset;
+  right: 50%; }
+
+.prod-ctr .tip-btn .tip.tip--bottom {
+  top: 50%; }
